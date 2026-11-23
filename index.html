@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>hatts · Páginas web para consultorios y clínicas</title>
-<meta name="description" content="Páginas web de una sola pantalla para consultorios y clínicas de Paraguay. Pago único, entrega en 5 días.">
+<title>Hatts Diseños · Páginas web para negocios y profesionales</title>
+<meta name="description" content="Páginas web de una sola pantalla y tarjetas digitales para negocios y profesionales de Paraguay. Pago único, entrega en 5 días.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
@@ -26,6 +26,7 @@ header{display:flex;justify-content:space-between;align-items:center;padding:20p
 h1{font-size:clamp(2.6rem,6.2vw,4.9rem);font-weight:800}
 .hero p{max-width:30em;margin:22px 0 30px;color:var(--mut);font-size:1.15rem}
 .cta{display:flex;gap:12px;flex-wrap:wrap}
+.para{display:flex;gap:8px;flex-wrap:wrap;margin-top:28px}
 .maps{background:var(--card);border-radius:var(--r);padding:22px;box-shadow:0 30px 60px -30px #10182655;transform:rotate(1.6deg)}
 .maps .t{font-weight:600;font-size:1.15rem}
 .maps .s{color:var(--mut);font-size:.9rem;margin:2px 0 14px}
@@ -78,6 +79,7 @@ section{padding:54px 0}}
     <h1 id="h1"></h1>
     <p id="sub"></p>
     <div class="cta"><a class="btn" id="waHero" href="#">Pedir una muestra gratis</a><a class="btn o" href="#precios">Ver precios</a></div>
+    <div class="para" id="para"></div>
   </div>
   <div class="maps" aria-hidden="true">
     <div class="t" id="mapNombre"></div>
@@ -109,21 +111,22 @@ const D = {
   nombre: "Vivi",
   ciudad: "Itauguá, Paraguay",
   whatsapp: "595986605013",          // tu número con código de país, sin + ni espacios
-  mensajeWhatsapp: "Hola, vi su página y me interesa una web para mi consultorio.",
+  mensajeWhatsapp: "Hola, vi su página y me interesa una web para mi negocio.",
   instagram: "",                      // ej: "https://instagram.com/tuusuario" (déjalo vacío si no tienes)
 
-  titular: "Tus pacientes ya te buscan en Google. Dales dónde escribirte.",
-  subtitulo: "Hago páginas web de una sola pantalla para consultorios y clínicas, con botón de WhatsApp para agendar citas. Te muestro cómo quedaría antes de que pagues.",
+  titular: "Tus clientes ya te buscan en internet. Dales dónde escribirte.",
+  subtitulo: "Hago páginas web de una sola pantalla y tarjetas digitales para negocios, emprendedores y profesionales, con botón de WhatsApp para que te escriban directo. Te muestro cómo quedaría antes de que pagues.",
+  paraQuien: ["Salones y estudios de belleza", "Consultorios y clínicas", "Emprendimientos", "Profesionales independientes"],
 
-  ejemploNombre: "Consultorio Dra. Gómez",
-  ejemploMeta: "Odontología · 4.9 (27 reseñas) · Asunción",
-  ejemploNota: "Hoy tus pacientes ven el mapa y nada más. Con una página, ven tus tratamientos, tus horarios y un botón para escribirte.",
+  ejemploNombre: "Studio Lumina",
+  ejemploMeta: "Estudio de belleza · Asunción",
+  ejemploNota: "Hoy tus clientes ven el mapa y nada más. Con una página, ven tus servicios, tus horarios y un botón para escribirte.",
 
   incluye: [
-    ["Adaptada a tu consultorio", "Tus colores, tu logo y tus fotos aplicados sobre un diseño profesional ya probado."],
-    ["Botón de WhatsApp", "El paciente toca y te escribe con el mensaje ya armado."],
+    ["Adaptada a tu negocio", "Tus colores, tu logo y tus fotos aplicados sobre un diseño profesional ya probado."],
+    ["Botón de WhatsApp", "Tu cliente toca y te escribe con el mensaje ya armado."],
     ["Se ve bien en el celular", "La mayoría de las búsquedas son desde el teléfono, así que parte de ahí."],
-    ["Tus datos en un solo lugar", "Tratamientos, horarios, mapa y reseñas, ordenados para que se entienda en segundos."],
+    ["Tus datos en un solo lugar", "Servicios, horarios, mapa y redes, ordenados para que se entienda en segundos."],
     ["Entrega completa", "Recibes los archivos y una guía de una página para cambiar textos y fotos tú mismo."]
   ],
 
@@ -149,7 +152,7 @@ const D = {
     ["¿Y si no me gusta?", "Ves la muestra gratis antes de decidir. Si no te convence, no pagas nada."]
   ],
 
-  cierre: "¿Te muestro cómo quedaría tu consultorio?",
+  cierre: "¿Te muestro cómo quedaría tu negocio?",
   pie: "© 2026 Hatts Diseños. Hecho en Paraguay."
 };
 /* ================== FIN DEL BLOQUE EDITABLE ================== */
@@ -163,6 +166,7 @@ $("logo").innerHTML = D.logo ? `<img src="${esc(D.logo)}" alt="${esc(D.marca)}" 
 ["waTop", "waHero", "waEnd"].forEach(i => $(i).href = wa);
 $("h1").textContent = D.titular;
 $("sub").textContent = D.subtitulo;
+D.paraQuien.forEach(t => { const c = document.createElement("span"); c.className = "chip"; c.textContent = t; $("para").append(c); });
 $("mapNombre").textContent = D.ejemploNombre;
 $("mapMeta").textContent = D.ejemploMeta;
 $("mapNota").textContent = D.ejemploNota;
@@ -175,7 +179,7 @@ D.precios.forEach(([t, p, m, g, tag, ant, antG]) => $("preciosL").append(mk(
 D.pasos.forEach(([t, p]) => $("pasosL").append(mk(`<h3>${esc(t)}</h3><p>${esc(p)}</p>`)));
 D.faq.forEach(([q, a]) => { const d = document.createElement("details"); d.innerHTML = `<summary>${esc(q)}</summary><p>${esc(a)}</p>`; $("faqL").append(d); });
 $("pie").innerHTML = esc(D.pie) + (D.instagram ? ` <a href="${esc(D.instagram)}" target="_blank" rel="noopener">Instagram</a>` : "");
-document.title = D.marca + " · Páginas web para consultorios y clínicas";
+document.title = D.marca + " · Páginas web para negocios y profesionales";
 </script>
 </body>
 </html>
