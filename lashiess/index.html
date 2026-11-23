@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>lashiess | Extensiones de pestañas en Lambaré</title>
+<meta name="description" content="Extensiones de pestañas, cejas y depilación en Lambaré, Paraguay. Agenda tu cita por WhatsApp.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700;900&family=Manrope:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#08060b;--card:#120d1a;--p:#b366ff;--pd:#5b2a8c;--g:#e0bb5f;--tx:#f3ecfa;--mut:#a99bbd;--line:#e0bb5f40}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--tx);font:400 1.05rem/1.65 Manrope,system-ui,sans-serif;overflow-x:hidden;background-image:radial-gradient(60% 40% at 80% 0%,#5b2a8c55,transparent),radial-gradient(50% 30% at 0% 60%,#5b2a8c33,transparent)}
+h1,h2,.d{font-family:Unbounded,Manrope,sans-serif;letter-spacing:-.02em;line-height:1.08}
+a{color:inherit}
+.w{max-width:1040px;margin:0 auto;padding:0 22px;position:relative}
+nav{display:flex;justify-content:space-between;align-items:center;padding:16px 0}
+nav img{height:46px;mix-blend-mode:screen;filter:brightness(2.2) saturate(1.3)}
+.btn{display:inline-block;padding:.85rem 1.5rem;border-radius:99px;background:linear-gradient(135deg,#c98bff,#7b3fc4);color:#fff;font-weight:700;text-decoration:none;box-shadow:0 0 0 1px #fff3 inset,0 10px 30px -10px #b366ff99;transition:transform .2s}
+.btn:hover{transform:translateY(-2px)}
+.btn.g{background:none;color:var(--g);box-shadow:0 0 0 1.5px var(--g) inset}
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:30px;align-items:center;padding:40px 0 90px;position:relative}
+h1{font-size:clamp(2.3rem,6vw,4.4rem);font-weight:900;background:linear-gradient(180deg,#fff,#d7b8ff 55%,#8a4fd0);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p{margin:20px 0 28px;color:var(--mut);max-width:28em;font-size:1.12rem}
+.cta{display:flex;gap:12px;flex-wrap:wrap}
+.logo{position:relative;display:grid;place-items:center}
+.logo img{width:100%;max-width:440px;mix-blend-mode:screen;filter:brightness(2.4) saturate(1.4) drop-shadow(0 0 24px #b366ff88)}
+.sp{position:absolute;background:var(--g);clip-path:polygon(50% 0,60% 40%,100% 50%,60% 60%,50% 100%,40% 60%,0 50%,40% 40%);animation:fl 5s ease-in-out infinite}
+@keyframes fl{50%{transform:translateY(-10px) rotate(15deg)}}
+@media(prefers-reduced-motion:reduce){.sp{animation:none}}
+section{padding:70px 0}
+h2{font-size:clamp(1.6rem,3.6vw,2.4rem);font-weight:700;margin-bottom:34px}
+h2 i{font-style:normal;color:var(--g)}
+.grp{margin-bottom:34px}
+.grp h3{font:700 .95rem Unbounded,sans-serif;color:var(--p);margin-bottom:6px}
+.row{display:flex;align-items:baseline;gap:12px;padding:15px 0;border-bottom:1px solid var(--line)}
+.row span:first-child{font-weight:700;font-size:1.12rem}
+.row b{margin-left:auto;font:700 1.05rem Unbounded,sans-serif;color:var(--g);white-space:nowrap}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
+.step{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:24px}
+.step .n{font:900 2.2rem Unbounded,sans-serif;color:var(--g);line-height:1;margin-bottom:10px}
+.step p{color:var(--mut);font-size:.98rem}
+.fotos{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}
+.fotos img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:20px}
+.loc{display:grid;grid-template-columns:.8fr 1.2fr;gap:34px;align-items:stretch}
+.info p{margin-bottom:14px;color:var(--mut)}
+.info b{color:var(--tx);display:block}
+.mapa{position:relative;display:block;border-radius:24px;overflow:hidden;border:1px solid var(--line);min-height:320px}
+.mapa iframe{width:100%;height:100%;min-height:320px;border:0;pointer-events:none;filter:invert(.92) hue-rotate(180deg) saturate(.6)}
+.mapa span{position:absolute;left:14px;bottom:14px;background:var(--g);color:#1a1020;padding:.6rem 1.1rem;border-radius:99px;font-weight:700;font-size:.95rem}
+.ig{text-align:center;padding:50px 22px;border:1px solid var(--line);border-radius:28px;background:var(--card)}
+.ig h2{margin-bottom:20px}
+footer{text-align:center;color:var(--mut);font-size:.88rem;padding:40px 0 100px}
+.fab{position:fixed;right:16px;bottom:16px;z-index:6;padding:.85rem 1.3rem}
+.mu{position:fixed;top:0;left:0;right:0;z-index:7;background:var(--g);color:#1a1020;text-align:center;font:700 .82rem Manrope,sans-serif;padding:.45rem}
+body.m{padding-top:34px}
+body.m::after{content:"MUESTRA";position:fixed;inset:0;display:grid;place-items:center;font:900 22vw Unbounded,sans-serif;color:#fff;opacity:.05;transform:rotate(-24deg);pointer-events:none;z-index:5}
+a:focus-visible{outline:3px solid var(--g);outline-offset:3px}
+@media(max-width:800px){.hero,.loc{grid-template-columns:1fr}.logo{order:-1}.logo img{max-width:300px}}
+</style>
+</head>
+<body>
+<div class="w">
+<nav><img src="lashiess-logo.png" alt="lashiess" id="navLogo"><a class="btn" id="waNav" href="#">Agendar</a></nav>
+<div class="hero">
+  <div><h1 id="h1"></h1><p id="sub"></p><div class="cta"><a class="btn" id="waHero" href="#">Agendar por WhatsApp</a><a class="btn g" href="#servicios">Ver servicios</a></div></div>
+  <div class="logo"><img src="lashiess-logo.png" alt="Logo de lashiess"><i class="sp" style="width:34px;height:34px;top:4%;right:8%"></i><i class="sp" style="width:20px;height:20px;bottom:12%;left:6%;animation-delay:-2s"></i><i class="sp" style="width:14px;height:14px;top:40%;left:0;animation-delay:-3s"></i></div>
+</div>
+</div>
+
+<section id="servicios"><div class="w"><h2>Nuestros <i>servicios</i></h2><div id="srv"></div></div></section>
+<section><div class="w"><h2>Cómo <i>agendar</i></h2><div class="steps" id="pasos"></div></div></section>
+<section id="secFotos"><div class="w"><h2>Nuestro <i>trabajo</i></h2><div class="fotos" id="fotos"></div></div></section>
+<section id="ubicacion"><div class="w"><h2>Dónde <i>estamos</i></h2>
+  <div class="loc"><div class="info"><p><b>Dirección</b><span id="dir"></span></p><p><b>Horario</b><span id="hor"></span></p><p id="nota"></p></div>
+  <a class="mapa" id="mapa" target="_blank" rel="noopener" aria-label="Abrir en Google Maps"><iframe id="map" title="Mapa" loading="lazy" tabindex="-1"></iframe><span>Abrir en Google Maps</span></a></div>
+</div></section>
+<section><div class="w"><div class="ig"><h2>Síguenos en <i>Instagram</i></h2><a class="btn g" id="igLink" target="_blank" rel="noopener" href="#">Ir a Instagram</a></div></div></section>
+<footer id="pie"></footer>
+<a class="btn fab" id="waFab" href="#">WhatsApp</a>
+
+<script>
+/* ============================================================
+   EDITA SOLO ESTE BLOQUE. Cambia los textos entre comillas.
+   No borres las comillas, las comas ni los corchetes.
+   ============================================================ */
+const D = {
+  muestra: true,                       // true = muestra con marca de agua. Pon false en la versión final
+  nombre: "lashiess",
+  titular: "Pestañas con actitud.",
+  subtitulo: "Extensiones de pestañas, cejas y depilación en Lambaré. Atención con agendamiento previo.",
+
+  whatsapp: "595981216323",
+  mensajeWhatsapp: "¡Hola! Quiero agendar una cita 💜",
+  instagram: "https://instagram.com/lashesabril_py",
+
+  servicios: [
+    ["Pestañas", [
+      ["Extensiones foxy", "Gs. 230.000"],
+      ["Extensiones simples", "Gs. 180.000"],
+      ["Extensiones egipcias", "Gs. 200.000"]
+    ]],
+    ["Cejas", [
+      ["Laminado de cejas", "Gs. 80.000"],
+      ["Diseño de cejas + depilado", "Gs. 80.000"]
+    ]],
+    ["Depilación", [
+      ["Depilación de bozo", "Gs. 25.000"]
+    ]]
+  ],
+
+  pasos: [
+    ["Escríbenos", "Toca el botón de WhatsApp y cuéntanos qué servicio quieres."],
+    ["Elegimos tu horario", "Atendemos con agendamiento previo, de lunes a sábado."],
+    ["Te esperamos", "Vienes a nuestro local en Lambaré y nos encargamos del resto."]
+  ],
+
+  fotos: [],                           // opcional: ["fotos/1.jpg", "fotos/2.jpg"]. Si queda vacío, la sección se oculta
+
+  direccion: "Lambaré, Paraguay",      // cámbiala por la dirección exacta cuando la tengas
+  horario: "Lunes a sábado, de 9:00 a 17:00",
+  notaHorario: "Solo con agendamiento previo.",
+  mapaConsulta: "Lambaré, Paraguay",   // lo que busca el mapa. Mejor: las coordenadas, ej: "-25.3456,-57.6543"
+  mapaEnlace: "",                      // opcional: enlace de Google Maps del local (botón Compartir). Si queda vacío, usa mapaConsulta
+
+  credito: "Página creada por hatts",
+  pie: "© 2026 lashiess"
+};
+/* ================== FIN DEL BLOQUE EDITABLE ================== */
+
+const $ = id => document.getElementById(id);
+const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+const wa = "https://wa.me/" + D.whatsapp + "?text=" + encodeURIComponent(D.mensajeWhatsapp);
+["waNav", "waHero", "waFab"].forEach(i => $(i).href = wa);
+$("h1").textContent = D.titular;
+$("sub").textContent = D.subtitulo;
+$("igLink").href = D.instagram;
+$("dir").textContent = D.direccion;
+$("hor").textContent = D.horario;
+$("nota").textContent = D.notaHorario;
+$("map").src = "https://maps.google.com/maps?q=" + encodeURIComponent(D.mapaConsulta) + "&output=embed";
+$("mapa").href = D.mapaEnlace || "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent(D.mapaConsulta);
+D.servicios.forEach(([g, items]) => {
+  const d = document.createElement("div"); d.className = "grp";
+  d.innerHTML = `<h3>${esc(g)}</h3>` + items.map(([n, p]) => `<div class="row"><span>${esc(n)}</span><b>${esc(p)}</b></div>`).join("");
+  $("srv").append(d);
+});
+D.pasos.forEach(([t, p], i) => { const d = document.createElement("div"); d.className = "step"; d.innerHTML = `<div class="n">${i + 1}</div><h3 class="d" style="font-size:1.05rem;margin-bottom:6px">${esc(t)}</h3><p>${esc(p)}</p>`; $("pasos").append(d); });
+if (D.fotos.length) D.fotos.forEach(f => { const i = document.createElement("img"); i.src = f; i.alt = "Trabajo de " + D.nombre; i.loading = "lazy"; $("fotos").append(i); }); else $("secFotos").remove();
+$("pie").textContent = D.pie + (D.credito ? " · " + D.credito : "");
+document.title = D.nombre + " | Extensiones de pestañas en Lambaré";
+if (D.muestra) { document.body.classList.add("m"); const b = document.createElement("div"); b.className = "mu"; b.textContent = "Versión de muestra, no es la página final"; document.body.prepend(b); }
+</script>
+</body>
+</html>
