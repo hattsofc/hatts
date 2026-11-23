@@ -100,6 +100,7 @@ a:focus-visible,summary:focus-visible{outline:3px solid var(--acc);outline-offse
    ============================================================ */
 const D = {
   marca: "hatts",
+  logo: "logo.png",                  // archivo del logo en la misma carpeta (déjalo vacío para mostrar solo el nombre)
   nombre: "Vivi",
   ciudad: "Itauguá, Paraguay",
   whatsapp: "595986605013",          // tu número con código de país, sin + ni espacios
@@ -114,7 +115,7 @@ const D = {
   ejemploNota: "Hoy tus pacientes ven el mapa y nada más. Con una página, ven tus tratamientos, tus horarios y un botón para escribirte.",
 
   incluye: [
-    ["Diseño a tu medida", "Colores, logo y fotos de tu consultorio. No es una plantilla repetida."],
+    ["Adaptada a tu consultorio", "Tus colores, tu logo y tus fotos aplicados sobre un diseño profesional ya probado."],
     ["Botón de WhatsApp", "El paciente toca y te escribe con el mensaje ya armado."],
     ["Se ve bien en el celular", "La mayoría de las búsquedas son desde el teléfono, así que parte de ahí."],
     ["Tus datos en un solo lugar", "Tratamientos, horarios, mapa y reseñas, ordenados para que se entienda en segundos."],
@@ -124,8 +125,8 @@ const D = {
   // Cada precio: [nombre, descripción, precio en dólares, precio en guaraníes, etiqueta de oferta, precio anterior en dólares, precio anterior en guaraníes]
   // Para quitar una oferta, deja vacíos los últimos tres: "", "", ""
   precios: [
-    ["Tarjeta digital", "Mini página con WhatsApp, horario, mapa y redes.", "$30", "(Gs. 180.000)", "¡Oferta de lanzamiento!", "$45", "(Gs. 275.000)"],
-    ["Página de consultorio", "Una pantalla completa con tratamientos, reseñas, mapa y botón de citas.", "$90", "(Gs. 550.000)", "", "", ""]
+    ["Tarjeta digital", "Mini página con WhatsApp, horario, mapa y redes.", "$30", "(Gs. 180.000)", "", "", ""],
+    ["Página web", "Una pantalla completa con tus servicios, horarios, mapa y botón de WhatsApp.", "$35", "(Gs. 215.000). Luego sube a $40 (Gs. 245.000)", "Precio de lanzamiento", "", ""]
   ],
   notaPrecios: "Pago único. 50% para empezar y 50% al publicar. Sin mensualidades. Los precios en guaraníes son aproximados y dependen del cambio del día.",
 
@@ -138,14 +139,13 @@ const D = {
 
   faq: [
     ["¿Hay mensualidades?", "No. Es un trabajo de entrega única. Pagas una vez y la página queda a tu nombre."],
-    ["¿Quién la actualiza después?", "Tú. Te entrego una guía de una página para cambiar textos y fotos. Durante 7 días corrijo cualquier error de lo entregado."],
-    ["¿Puedo tener mi propio dominio (tuconsultorio.com)?", "Por ahora entrego la página con un link gratuito, listo para compartir. Si más adelante quieres un dominio propio, lo conversamos."],
+    ["¿Quién la actualiza después?", "Tú, con la guía de una página que te entrego, o cualquier persona que trabaje con páginas web. Si prefieres que lo haga yo, cuesta $15 por pedido de hasta 4 cambios pequeños. Durante 7 días corrijo cualquier error de lo entregado."],
     ["¿Cuánto tarda?", "Entre 3 y 5 días hábiles desde que me envías tus datos."],
     ["¿Y si no me gusta?", "Ves la muestra gratis antes de decidir. Si no te convence, no pagas nada."]
   ],
 
   cierre: "¿Te muestro cómo quedaría tu consultorio?",
-  pie: "© 2026 hatts. Hecho en Paraguay."
+  pie: "© 2026 Hatts Diseños. Hecho en Paraguay."
 };
 /* ================== FIN DEL BLOQUE EDITABLE ================== */
 
@@ -154,7 +154,7 @@ const wa = "https://wa.me/" + D.whatsapp + "?text=" + encodeURIComponent(D.mensa
 const mk = (t, c) => { const e = document.createElement("div"); if (c) e.className = c; e.innerHTML = t; return e; };
 const esc = s => String(s).replace(/[&<>]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;" }[c]));
 
-$("logo").innerHTML = esc(D.marca) + "<i>.</i>";
+$("logo").innerHTML = D.logo ? `<img src="${esc(D.logo)}" alt="${esc(D.marca)}" style="height:46px;width:auto;display:block">` : esc(D.marca) + "<i>.</i>";
 ["waTop", "waHero", "waEnd"].forEach(i => $(i).href = wa);
 $("h1").textContent = D.titular;
 $("sub").textContent = D.subtitulo;
