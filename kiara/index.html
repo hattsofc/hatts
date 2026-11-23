@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<!-- BORRAR LA LINEA DE ABAJO (noindex) AL ENTREGAR, cuando el cliente pague el saldo -->
+<meta name="robots" content="noindex, nofollow">
+<title>Kiara Chamorro Lash</title>
+<meta name="description" content="Cejas y pestañas en Lambaré, Paraguay.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Jost:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --cafe-oscuro:#3B2A1D;
+  --cafe:#5E4C35;
+  --caramelo:#A9805A;
+  --arena:#E8DFD4;
+  --hueso:#F5F0E9;
+  --linea:rgba(59,42,29,.2);
+  --serif:"Cormorant Garamond",Georgia,"Times New Roman",serif;
+  --sans:"Jost",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+body{margin:0;background:var(--arena);color:var(--cafe-oscuro);font-family:var(--sans);font-size:1.0625rem;line-height:1.6}
+img{display:block;max-width:100%}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--caramelo);outline-offset:3px}
+h1,h2,h3{font-family:var(--serif);font-weight:500;line-height:1.08;margin:0}
+p{margin:0}
+.contenedor{width:min(1120px,100% - 2.5rem);margin-inline:auto}
+
+/* Aviso de muestra */
+.aviso{background:var(--cafe-oscuro);color:var(--hueso);text-align:center;font-size:.9rem;padding:.55rem 1rem}
+
+/* Encabezado */
+.cabecera{display:flex;align-items:center;justify-content:space-between;padding-block:1.1rem}
+.cabecera img{height:48px;width:auto}
+
+/* Botones */
+.boton{display:inline-flex;align-items:center;justify-content:center;gap:.6rem;min-height:3rem;padding:.7rem 1.6rem;border-radius:999px;border:1.5px solid var(--cafe);font:500 1rem/1 var(--sans);text-decoration:none;cursor:pointer;transition:background-color .2s,color .2s}
+.boton-lleno{background:var(--cafe);color:var(--hueso)}
+.boton-lleno:hover{background:var(--cafe-oscuro)}
+.boton-borde{background:transparent;color:var(--cafe)}
+.boton-borde:hover{background:var(--cafe);color:var(--hueso)}
+.boton svg{width:1.15rem;height:1.15rem;fill:currentColor;flex:none}
+
+/* Portada */
+.portada{padding-block:2rem 4.5rem}
+.portada-grid{display:grid;gap:3rem;align-items:center}
+.portada h1{font-size:clamp(2.7rem,7.2vw,5.2rem);letter-spacing:-.01em;max-width:11ch}
+.portada .descripcion{margin-top:1.4rem;max-width:34ch;font-size:1.15rem}
+.acciones{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:2rem}
+.arco-caja{position:relative;padding:0 16px 16px 0;max-width:430px;width:100%;justify-self:center}
+.arco-caja::before{content:"";position:absolute;inset:16px 0 0 16px;border:1.5px solid var(--caramelo);border-radius:999px 999px 0 0}
+.arco-caja img{position:relative;width:100%;aspect-ratio:4/5;object-fit:cover;object-position:50% 40%;border-radius:999px 999px 0 0;background:var(--cafe)}
+@media (prefers-reduced-motion:no-preference){
+  .arco-caja img{animation:revelar 1.2s cubic-bezier(.2,.7,.2,1) both}
+  @keyframes revelar{from{clip-path:inset(100% 0 0 0)}to{clip-path:inset(0 0 0 0)}}
+}
+
+/* Servicios */
+.servicios{background:var(--hueso);padding-block:5rem}
+.servicios-grid{display:grid;gap:2.5rem}
+.servicios h2,.visita h2,.sobre h2{font-size:clamp(2.2rem,5vw,3.4rem)}
+.foto-lateral img{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:4px}
+.lista{margin-top:1.8rem;border-top:1px solid var(--linea)}
+.servicio{display:grid;grid-template-columns:1fr auto;gap:.2rem 1.5rem;align-items:baseline;padding:1.3rem .25rem;border-bottom:1px solid var(--linea);text-decoration:none;transition:background-color .2s}
+.servicio:hover{background:var(--arena)}
+.servicio h3{font-size:1.7rem}
+.servicio .precio{font-family:var(--serif);font-size:1.45rem;font-weight:600;text-align:right;white-space:nowrap}
+.servicio .detalle{font-size:.98rem;opacity:.85}
+.servicio .reservar{font-size:.92rem;text-align:right;text-decoration:underline;text-underline-offset:3px}
+.nota-precios{margin-top:1.2rem;font-size:.92rem;opacity:.85}
+
+/* Sobre Kiara */
+.sobre{background:var(--cafe-oscuro);color:var(--hueso);padding-block:5rem}
+.sobre-grid{display:grid;gap:2.5rem;align-items:center}
+.sobre p{margin-top:1.2rem;max-width:42ch;font-size:1.1rem}
+.sobre .acciones{margin-top:1.8rem}
+.sobre .boton-borde{border-color:var(--hueso);color:var(--hueso)}
+.sobre .boton-borde:hover{background:var(--hueso);color:var(--cafe-oscuro)}
+.sobre img{width:100%;aspect-ratio:5/4;object-fit:cover;object-position:50% 30%;border-radius:4px}
+
+/* Visita */
+.visita{padding-block:5rem 6rem}
+.visita-grid{display:grid;gap:2.5rem}
+.visita dl{margin:1.8rem 0 0;display:grid;gap:1.1rem}
+.visita dt{font-family:var(--serif);font-size:1.5rem;font-weight:600;line-height:1.1}
+.visita dd{margin:.15rem 0 0}
+.visita .pequeno{font-size:.92rem;opacity:.85}
+.visita .acciones{margin-top:2rem}
+.mapa{width:100%;aspect-ratio:4/3;min-height:300px;border:0;border-radius:4px;background:var(--hueso)}
+
+/* Pie */
+.pie{border-top:1px solid var(--linea);padding-block:2rem 6rem}
+.pie .contenedor{display:flex;align-items:center;gap:1.2rem}
+.pie img{height:44px;width:auto}
+.pie p{font-size:.95rem}
+
+/* Botón flotante (solo celular) */
+.flotante{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(1rem + env(safe-area-inset-bottom,0px));z-index:10;box-shadow:0 6px 20px rgba(59,42,29,.3);white-space:nowrap}
+
+@media (min-width:820px){
+  .portada{padding-block:3rem 6rem}
+  .portada-grid{grid-template-columns:1.15fr .85fr;gap:4rem}
+  .servicios-grid{grid-template-columns:5fr 7fr;gap:4.5rem;align-items:start}
+  .foto-lateral{position:sticky;top:2rem}
+  .foto-lateral img{aspect-ratio:4/5}
+  .sobre-grid{grid-template-columns:1fr 1fr;gap:4.5rem}
+  .visita-grid{grid-template-columns:5fr 7fr;gap:4rem;align-items:start}
+  .flotante{display:none}
+  .pie{padding-bottom:2.5rem}
+}
+</style>
+</head>
+<body>
+
+<!-- =====================================================================
+     EDITA SOLO ESTE BLOQUE
+     Cambia solo lo que está entre comillas "...". No borres comillas ni comas.
+     ===================================================================== -->
+<script>
+const DATOS = {
+  // Mientras el cliente NO pague el saldo: true. Al entregar: false
+  muestra: true,
+
+  negocio: "Kiara Chamorro Lash",
+  lema: "Cejas y pestañas que transforman tu rostro",
+  descripcion: "Kiara Chamorro, especialista certificada en cejas y pestañas. Atención con cita previa en Lambaré.",
+  ciudad: "Lambaré, Paraguay",
+
+  // WhatsApp: empieza con 595 y sin espacios ni signos (VERIFICAR con la clienta)
+  whatsapp: "595975480033",
+  mensajeWhatsapp: "Hola Kiara, vi tu página web y quiero agendar una cita.",
+
+  instagramUsuario: "kiarachamorro_lash",
+  instagramLink: "https://www.instagram.com/kiarachamorro_lash/",
+
+  direccion: "Calle Mariscal Estigarribia y Virgen del Rosario, Lambaré",
+  codigoMaps: "M95C+2HF",
+  // Texto que se busca en Google Maps para mostrar el mapa
+  mapaBusqueda: "M95C+2HF Lambaré Paraguay",
+
+  horarios: [
+    ["Lunes a viernes", "10:00 a 20:00, con cita previa"],
+    ["Domingos y feriados", "Cerrado"]
+  ],
+
+  // Cada servicio: [nombre, descripción corta, precio]  (PRECIOS DE EJEMPLO)
+  servicios: [
+    ["Extensiones de pestañas", "Pestañas con más largo y volumen.", "Gs. 250.000"],
+    ["Lifting de pestañas", "Levanta y curva tus pestañas naturales.", "Gs. 150.000"],
+    ["Laminado con tinte", "Efecto ordenado y definido, con tinte.", "Gs. 120.000"],
+    ["Diseño y depilación de cejas", "Un diseño pensado para tu rostro.", "Gs. 60.000"],
+    ["Diseño y depilación con henna", "Diseño de cejas con henna para dar color.", "Gs. 80.000"],
+    ["Hydragloss", "Tratamiento de hidratación y brillo para labios.", "Gs. 130.000"]
+  ]
+};
+</script>
+<!-- ===================== FIN DEL BLOQUE EDITABLE ===================== -->
+
+<div class="aviso" id="aviso" hidden>Vista previa de muestra. Los precios y textos son de ejemplo y se adaptan al negocio.</div>
+
+<header class="contenedor cabecera">
+  <img src="kiara-logo.png" alt="Logo de Kiara Chamorro Lash, monograma KC">
+  <a class="boton boton-borde" data-wa href="#">Agendar</a>
+</header>
+
+<main>
+  <section class="portada">
+    <div class="contenedor portada-grid">
+      <div>
+        <h1 id="lema"></h1>
+        <p class="descripcion" id="descripcion"></p>
+        <div class="acciones">
+          <a class="boton boton-lleno" data-wa href="#">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 3h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H9l-5 4v-4H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2Z"/></svg>
+            Agendar por WhatsApp
+          </a>
+          <a class="boton boton-borde" href="#servicios">Ver servicios</a>
+        </div>
+      </div>
+      <div class="arco-caja">
+        <img src="kiara-resultado.jpg" alt="Cejas diseñadas y pestañas con extensiones, trabajo de Kiara Chamorro">
+      </div>
+    </div>
+  </section>
+
+  <section class="servicios" id="servicios">
+    <div class="contenedor servicios-grid">
+      <div class="foto-lateral">
+        <img src="kiara-trabajo-pestanas.jpg" alt="Primer plano de una colocación de extensiones de pestañas con pinzas" loading="lazy">
+      </div>
+      <div>
+        <h2>Servicios</h2>
+        <div class="lista" id="lista"></div>
+        <p class="nota-precios" id="notaPrecios" hidden>Precios de ejemplo. Se ajustan a los precios reales de Kiara.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="sobre">
+    <div class="contenedor sobre-grid">
+      <div>
+        <h2>Kiara Chamorro</h2>
+        <p>Especialista certificada en cejas y pestañas. Atiende con cita previa en Lambaré, Paraguay. Mirá más de su trabajo en Instagram.</p>
+        <div class="acciones">
+          <a class="boton boton-borde" id="igSobre" href="#" target="_blank" rel="noopener">Ver Instagram</a>
+        </div>
+      </div>
+      <img src="kiara-trabajando.jpg" alt="Kiara Chamorro atendiendo a una clienta en su consultorio" loading="lazy">
+    </div>
+  </section>
+
+  <section class="visita" id="visita">
+    <div class="contenedor visita-grid">
+      <div>
+        <h2>Cómo llegar</h2>
+        <dl>
+          <div>
+            <dt>Dirección</dt>
+            <dd id="direccion"></dd>
+            <dd class="pequeno" id="codigoMaps"></dd>
+          </div>
+          <div>
+            <dt>Horario</dt>
+            <dd id="horarios"></dd>
+          </div>
+          <div>
+            <dt>WhatsApp</dt>
+            <dd id="telefono"></dd>
+          </div>
+        </dl>
+        <div class="acciones">
+          <a class="boton boton-lleno" id="irMapa" href="#" target="_blank" rel="noopener">Abrir en Google Maps</a>
+          <a class="boton boton-borde" data-wa href="#">Escribir por WhatsApp</a>
+        </div>
+      </div>
+      <iframe class="mapa" id="mapa" title="Mapa con la ubicación de Kiara Chamorro Lash" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+    </div>
+  </section>
+</main>
+
+<footer class="pie">
+  <div class="contenedor">
+    <img src="kiara-logo.png" alt="">
+    <p id="piePie"></p>
+  </div>
+</footer>
+
+<a class="boton boton-lleno flotante" data-wa href="#">Agendar por WhatsApp</a>
+
+<script>
+(function () {
+  var D = DATOS;
+  var $ = function (id) { return document.getElementById(id); };
+
+  function linkWhatsApp(mensaje) {
+    return "https://wa.me/" + D.whatsapp + "?text=" + encodeURIComponent(mensaje);
+  }
+
+  // Título y descripción de la pestaña
+  document.title = D.negocio + " | Cejas y pestañas en " + D.ciudad.split(",")[0];
+
+  // Textos
+  $("lema").textContent = D.lema;
+  $("descripcion").textContent = D.descripcion;
+  $("direccion").textContent = D.direccion;
+  $("codigoMaps").textContent = "Código de Maps: " + D.codigoMaps;
+  $("piePie").textContent = D.negocio + ", " + D.ciudad;
+
+  // Aviso de muestra
+  if (D.muestra) {
+    $("aviso").hidden = false;
+    $("notaPrecios").hidden = false;
+  }
+
+  // Botones de WhatsApp (todos los que tienen data-wa)
+  var botonesWa = document.querySelectorAll("[data-wa]");
+  for (var i = 0; i < botonesWa.length; i++) {
+    botonesWa[i].href = linkWhatsApp(D.mensajeWhatsapp);
+    botonesWa[i].target = "_blank";
+    botonesWa[i].rel = "noopener";
+  }
+
+  // Teléfono con formato
+  var n = D.whatsapp;
+  var tel = "+" + n.slice(0, 3) + " " + n.slice(3, 6) + " " + n.slice(6, 9) + " " + n.slice(9);
+  $("telefono").textContent = tel.trim();
+
+  // Instagram
+  $("igSobre").href = D.instagramLink;
+
+  // Horarios
+  var cajaHorarios = $("horarios");
+  D.horarios.forEach(function (h) {
+    var p = document.createElement("div");
+    var b = document.createElement("strong");
+    b.style.fontWeight = "500";
+    b.textContent = h[0] + ": ";
+    p.appendChild(b);
+    p.appendChild(document.createTextNode(h[1]));
+    cajaHorarios.appendChild(p);
+  });
+
+  // Servicios (cada fila abre WhatsApp con el nombre del servicio)
+  var lista = $("lista");
+  D.servicios.forEach(function (s) {
+    var a = document.createElement("a");
+    a.className = "servicio";
+    a.href = linkWhatsApp("Hola Kiara, quiero agendar: " + s[0] + ".");
+    a.target = "_blank";
+    a.rel = "noopener";
+
+    var h3 = document.createElement("h3");
+    h3.textContent = s[0];
+    var precio = document.createElement("span");
+    precio.className = "precio";
+    precio.textContent = s[2];
+    var detalle = document.createElement("span");
+    detalle.className = "detalle";
+    detalle.textContent = s[1];
+    var reservar = document.createElement("span");
+    reservar.className = "reservar";
+    reservar.textContent = "Reservar";
+
+    a.appendChild(h3);
+    a.appendChild(precio);
+    a.appendChild(detalle);
+    a.appendChild(reservar);
+    lista.appendChild(a);
+  });
+
+  // Mapa
+  var consulta = encodeURIComponent(D.mapaBusqueda);
+  $("mapa").src = "https://www.google.com/maps?q=" + consulta + "&output=embed";
+  $("irMapa").href = "https://www.google.com/maps/search/?api=1&query=" + consulta;
+})();
+</script>
+</body>
+</html>
