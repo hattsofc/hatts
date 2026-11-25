@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Saturnina Nail Studio | Uñas en Asunción</title>
+<meta name="description" content="Saturnina Nail Studio: servicio de uñas en Asunción, barrio Obrero. Capping, esculpidas, pedicura y spa de manos y pies. Reservá por WhatsApp.">
+<!-- NOINDEX: borrar esta línea cuando el cliente pague el saldo -->
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Jost:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --crema:#FFF8F5; --rubor:#FBE9E7; --petalo:#F1CFCC; --oro:#B08142; --rosa:#8E4753; --ciruela:#6F3540; --cafe:#4A2E2C;
+  --serif:"Cormorant Garamond",Georgia,"Times New Roman",serif;
+  --sans:"Jost",system-ui,-apple-system,"Segoe UI",Arial,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--crema);color:var(--cafe);font-family:var(--sans);font-size:17px;line-height:1.6}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--rosa);outline-offset:3px}
+.wrap{width:min(1040px,100% - 2.5rem);margin-inline:auto}
+.muestra{background:var(--ciruela);color:var(--rubor);text-align:center;font-size:.9rem;padding:.5rem 1rem}
+header{padding:1.1rem 0;border-bottom:1px solid var(--petalo)}
+header .wrap{display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap}
+.marca{font-family:var(--serif);font-size:1.45rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;text-decoration:none;color:var(--rosa)}
+nav{display:flex;gap:1.4rem;font-size:.98rem}
+nav a{text-decoration:none;padding:.25rem 0;border-bottom:1px solid transparent}
+nav a:hover{border-color:var(--oro)}
+.hero{padding:3rem 0 4rem}
+.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:2.5rem;align-items:center}
+.hero .tipo{font-size:.85rem;letter-spacing:.35em;text-transform:uppercase;color:var(--oro);font-weight:500}
+h1{font-family:var(--serif);font-weight:600;font-size:clamp(2.6rem,6.5vw,4.6rem);line-height:1.05;letter-spacing:.04em;color:var(--rosa);margin:.6rem 0 0}
+.filete{width:84px;height:2px;background:var(--oro);margin:1.4rem 0}
+.hero p{max-width:36ch;font-size:1.12rem;margin-bottom:2rem}
+.botones{display:flex;gap:.8rem;flex-wrap:wrap}
+.btn{display:inline-block;padding:.85rem 1.7rem;border-radius:999px;text-decoration:none;font-weight:500;border:1.5px solid var(--rosa);transition:background .2s,color .2s}
+.btn.principal{background:var(--rosa);color:var(--crema)}
+.btn.principal:hover{background:var(--ciruela);border-color:var(--ciruela)}
+.btn.suave:hover{background:var(--rubor)}
+.logo{justify-self:center;width:min(100%,360px);aspect-ratio:1;border-radius:50%;box-shadow:0 0 0 6px var(--crema),0 0 0 7.5px var(--oro)}
+.logo img{width:100%;height:100%;display:block;border-radius:50%}
+section{padding:4rem 0}
+.alt{background:var(--rubor)}
+h2{font-family:var(--serif);font-weight:600;font-size:clamp(2rem,4.5vw,3rem);line-height:1.1;color:var(--rosa);margin-bottom:.4rem}
+.sub{margin-bottom:2.2rem}
+.grupos{display:grid;grid-template-columns:1fr 1fr;gap:3rem}
+h3{font-family:var(--serif);font-weight:600;font-size:1.7rem;letter-spacing:.06em;text-transform:uppercase;color:var(--cafe);margin-bottom:1rem;padding-bottom:.5rem;border-bottom:1.5px solid var(--oro)}
+.item{padding:.8rem 0;border-bottom:1px solid var(--petalo)}
+.item .fila{display:flex;align-items:baseline;gap:.6rem}
+.item .nombre{font-weight:500}
+.item .linea{flex:1;border-bottom:1.5px dotted var(--oro);transform:translateY(-4px);min-width:1rem}
+.item .precio{font-family:var(--serif);font-size:1.35rem;font-weight:600;color:var(--rosa);white-space:nowrap}
+.item .desc{font-size:.95rem;margin-top:.1rem}
+.item a{font-size:.92rem;color:var(--rosa)}
+.nota{margin-top:1.1rem;font-size:.95rem;padding:.7rem 1rem;border:1px solid var(--petalo);border-radius:.8rem;background:var(--crema)}
+.galeria .fotos{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem;margin-top:1.6rem}
+.galeria img{width:100%;aspect-ratio:4/5;object-fit:cover;display:block;border-radius:1.2rem;border:1.5px solid var(--petalo)}
+.lugar .wrap{display:grid;grid-template-columns:.85fr 1.15fr;gap:2.5rem;align-items:start}
+.datos dt{font-family:var(--serif);font-size:1.3rem;font-weight:600;color:var(--rosa);margin-top:1.2rem}
+.datos dd{margin-top:.1rem}
+.datos .btn{margin-top:1.6rem}
+.mapa{border-radius:1.2rem;overflow:hidden;border:1.5px solid var(--petalo);background:var(--rubor);aspect-ratio:4/3}
+.mapa iframe{width:100%;height:100%;border:0;display:block}
+.contacto{background:var(--ciruela);color:var(--rubor);text-align:center}
+.contacto h2{color:var(--crema)}
+.contacto p{max-width:42ch;margin:.6rem auto 2rem}
+.contacto .btn.principal{background:var(--crema);border-color:var(--crema);color:var(--ciruela)}
+.contacto .btn.principal:hover{background:var(--petalo);border-color:var(--petalo)}
+.redes{display:flex;justify-content:center;gap:1.6rem;margin-top:1.8rem;flex-wrap:wrap}
+.redes a{color:var(--rubor)}
+footer{background:var(--ciruela);color:var(--petalo);text-align:center;font-size:.88rem;padding:0 1rem 2rem}
+@media (max-width:760px){
+  .hero .wrap,.grupos,.lugar .wrap{grid-template-columns:1fr}
+  .logo{width:min(80%,280px)}
+  .hero .wrap > div:first-child{order:2}
+  section{padding:3rem 0}
+  nav{gap:1rem}
+  .galeria .fotos{gap:.7rem}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn{transition:none}}
+</style>
+</head>
+<body>
+
+<div class="muestra" id="banner" hidden>Vista previa creada por Hatts Diseños.</div>
+
+<header>
+  <div class="wrap">
+    <a class="marca" href="#inicio" id="marca">Saturnina</a>
+    <nav aria-label="Menú principal">
+      <a href="#servicios">Servicios</a>
+      <a href="#spa">Spa</a>
+      <a href="#trabajos">Trabajos</a>
+      <a href="#ubicacion">Ubicación</a>
+    </nav>
+  </div>
+</header>
+
+<main id="inicio">
+  <div class="hero">
+    <div class="wrap">
+      <div>
+        <span class="tipo" id="lema">Brillo · Detalle · Elegancia</span>
+        <h1 id="titulo">Saturnina Nail Studio</h1>
+        <div class="filete" aria-hidden="true"></div>
+        <p id="intro">Servicios de uñas en Asunción, barrio Obrero. Reservá tu turno por WhatsApp.</p>
+        <div class="botones">
+          <a class="btn principal" id="btnReservar" href="#">Reservar por WhatsApp</a>
+          <a class="btn suave" href="#servicios">Ver servicios</a>
+        </div>
+      </div>
+      <div class="logo"><img src="saturnina-logo.png" width="600" height="600" alt="Logo de Saturnina Nail Studio"></div>
+    </div>
+  </div>
+
+  <div id="secciones"></div>
+
+  <section class="galeria" id="trabajos">
+    <div class="wrap">
+      <h2>Nuestros trabajos</h2>
+      <p class="sub">Algunos de los diseños que hacemos en el estudio.</p>
+      <div class="fotos">
+        <img src="saturnina-trabajo-1.jpg" width="1000" height="1217" loading="lazy" alt="Uñas en tono nude lechoso con un diseño de hojas negras">
+        <img src="saturnina-trabajo-2.jpg" width="1000" height="1340" loading="lazy" alt="Uñas almendradas con degradé, perlas y brillos">
+      </div>
+    </div>
+  </section>
+
+  <section class="lugar alt" id="ubicacion">
+    <div class="wrap">
+      <div class="datos">
+        <h2>Dónde estamos</h2>
+        <dl>
+          <dt>Dirección</dt><dd id="direccion"></dd>
+          <dt>Horario</dt><dd id="horario"></dd>
+          <dt>Reservas</dt><dd id="reservas"></dd>
+        </dl>
+        <a class="btn principal" id="btnMapa" href="#" target="_blank" rel="noopener">Abrir en Google Maps</a>
+      </div>
+      <div class="mapa"><iframe id="mapa" title="Mapa de ubicación de Saturnina Nail Studio" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+    </div>
+  </section>
+
+  <section class="contacto" id="contacto">
+    <div class="wrap">
+      <h2>Reservá tu turno</h2>
+      <p>Escribinos por WhatsApp y coordinamos el día y la hora.</p>
+      <a class="btn principal" id="btnContacto" href="#">Escribir por WhatsApp</a>
+      <div class="redes" id="redes"></div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <p id="pie"></p>
+</footer>
+
+<script>
+/* ============ EDITA SOLO ESTE BLOQUE ============ */
+const CONFIG = {
+  muestra: true,                       // true = vista previa con aviso. Al entregar: false
+  negocio: "Saturnina Nail Studio",
+  lema: "Brillo · Detalle · Elegancia",
+  intro: "Servicios de uñas en Asunción, barrio Obrero. Reservá tu turno por WhatsApp.",
+  whatsapp: "595992752945",
+  mensaje: "Hola, quiero reservar un turno en Saturnina Nail Studio.",
+  direccion: "Av. Estados Unidos 1882, barrio Obrero, Asunción",
+  duena: "Stefi Servian",
+  horario: "Lunes a sábado, de 10:00 a 19:00. Domingos cerrado.",
+  reservas: "Las reservas se confirman con seña. Tolerancia máxima de espera: 15 minutos.",
+  mapaBusqueda: "-25.3003491,-57.6356409",
+  mapaLink: "https://www.google.com/maps/place/Saturnina+NAILS+STUDIO/@-25.3003442,-57.6382158,683m/data=!3m2!1e3!4b1!4m6!3m5!1s0x945da9001be81db5:0x4e0643df03b55cd8!8m2!3d-25.3003491!4d-57.6356409!16s%2Fg%2F11z7991pf5?entry=ttu&g_ep=EgoyMDI2MTEyMi4wIKXMDSoASAFQAw%3D%3D",
+  redes: [
+    { nombre: "Instagram @saturninanailsstudio_", link: "https://www.instagram.com/saturninanailsstudio_/" }
+  ],
+  /* Los servicios se ordenan solos de mayor a menor precio. desde:true muestra "desde" */
+  secciones: [
+    { id: "servicios", titulo: "Servicios y precios", sub: "Precios en guaraníes. Tocá “Reservar” en el servicio que querés.", alt: true, grupos: [
+      { titulo: "Uñas en manos", nota: "Los precios de capping y esculpidas ya incluyen esmaltado semipermanente liso.", servicios: [
+        { nombre: "Esculpidas en acrílico", precio: 200000 },
+        { nombre: "Esculpidas en soft gel", precio: 180000 },
+        { nombre: "Service de esculpidas en acrílico", precio: 180000 },
+        { nombre: "Capping en polygel y acrílico", precio: 170000 },
+        { nombre: "Service de soft gel", precio: 160000 },
+        { nombre: "Service de capping en polygel y acrílico", precio: 150000 },
+        { nombre: "Capping en gel", precio: 140000 },
+        { nombre: "Service de capping gel", precio: 130000 },
+        { nombre: "Manicura semipermanente", precio: 85000 },
+        { nombre: "Manicura tradicional", precio: 45000 },
+        { nombre: "Francesas", precio: 20000 },
+        { nombre: "Diseños", precio: 20000, desde: true }
+      ]},
+      { titulo: "Uñas en pies", nota: "Todos los servicios de pedicura incluyen exfoliación e hidratación.", servicios: [
+        { nombre: "Acripie (incluye esmaltado semi o francesa)", precio: 190000 },
+        { nombre: "Pedicura semipermanente", precio: 110000 },
+        { nombre: "Pedicura tradicional", precio: 70000 },
+        { nombre: "Tratamiento de callos", precio: 30000 },
+        { nombre: "Reconstrucción por uña", precio: 20000 },
+        { nombre: "Pedicura clínica", precio: 20000, desde: true },
+        { nombre: "Francesas", precio: 20000 }
+      ]}
+    ]},
+    { id: "spa", titulo: "Spa", sub: "Un momento de descanso para tus manos y tus pies.", alt: false, grupos: [
+      { titulo: "Spa en manos", servicios: [
+        { nombre: "Spa premium en manos", precio: 60000 },
+        { nombre: "Spa de parafina en manos", precio: 30000 },
+        { nombre: "Jelly spa en manos", precio: 30000 }
+      ]},
+      { titulo: "Spa en pies", servicios: [
+        { nombre: "Reflexología podal", precio: 90000 },
+        { nombre: "Spa premium en pies", precio: 70000 },
+        { nombre: "Spa de parafina en pies", precio: 40000 },
+        { nombre: "Jelly spa en pies", precio: 40000 }
+      ]}
+    ]}
+  ]
+};
+/* ============ FIN DEL BLOQUE ============ */
+
+(function(){
+  var C = CONFIG;
+  function $(id){ return document.getElementById(id); }
+  function wa(texto){ return "https://wa.me/" + C.whatsapp + "?text=" + encodeURIComponent(texto); }
+  function el(tag, clase, texto){
+    var e = document.createElement(tag);
+    if (clase) e.className = clase;
+    if (texto !== undefined) e.textContent = texto;
+    return e;
+  }
+
+  document.title = C.negocio + " | Uñas en Asunción";
+  $("titulo").textContent = C.negocio;
+  $("lema").textContent = C.lema;
+  $("intro").textContent = C.intro;
+  $("direccion").textContent = C.direccion;
+  $("horario").textContent = C.horario;
+  $("reservas").textContent = C.reservas;
+  $("pie").textContent = "© " + C.negocio + (C.duena ? " · " + C.duena : "") + (C.muestra ? " · Vista previa" : "");
+  if (C.muestra) { $("banner").hidden = false; }
+
+  $("btnReservar").href = wa(C.mensaje);
+  $("btnContacto").href = wa(C.mensaje);
+  $("btnMapa").href = C.mapaLink;
+  $("mapa").src = "https://maps.google.com/maps?q=" + encodeURIComponent(C.mapaBusqueda) + "&z=17&output=embed";
+
+  var cont = $("secciones");
+  C.secciones.forEach(function(sec){
+    var s = el("section", sec.alt ? "alt" : "");
+    s.id = sec.id;
+    var wrap = el("div", "wrap");
+    wrap.appendChild(el("h2", "", sec.titulo));
+    wrap.appendChild(el("p", "sub", sec.sub));
+    var grid = el("div", "grupos");
+    sec.grupos.forEach(function(g){
+      var col = el("div");
+      col.appendChild(el("h3", "", g.titulo));
+      g.servicios.slice().sort(function(a,b){ return b.precio - a.precio; }).forEach(function(sv){
+        var item = el("div", "item");
+        var fila = el("div", "fila");
+        fila.appendChild(el("span", "nombre", sv.nombre));
+        fila.appendChild(el("span", "linea"));
+        fila.appendChild(el("span", "precio", (sv.desde ? "desde " : "") + sv.precio.toLocaleString("es-PY") + " Gs"));
+        item.appendChild(fila);
+        if (sv.desc) { item.appendChild(el("p", "desc", sv.desc)); }
+        var a = el("a", "", "Reservar");
+        a.href = wa("Hola, quiero reservar: " + sv.nombre + ".");
+        item.appendChild(a);
+        col.appendChild(item);
+      });
+      if (g.nota) { col.appendChild(el("p", "nota", g.nota)); }
+      grid.appendChild(col);
+    });
+    wrap.appendChild(grid);
+    s.appendChild(wrap);
+    cont.appendChild(s);
+  });
+
+  var contRedes = $("redes");
+  C.redes.forEach(function(r){
+    if (!r.link) return;
+    var a = el("a", "", r.nombre);
+    a.href = r.link; a.target = "_blank"; a.rel = "noopener";
+    contRedes.appendChild(a);
+  });
+})();
+</script>
+</body>
+</html>
