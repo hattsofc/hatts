@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Alma Nude Studio | Uñas y maquillaje</title>
+<meta name="description" content="Alma Nude Studio: uñas y maquillaje profesional en Asunción. Reservá por WhatsApp.">
+<!-- NOINDEX: borrar esta línea cuando el cliente pague el saldo -->
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Jost:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --pergamino:#F5EDDA; --pergamino2:#EBDFC3; --borde:#D8C8A2; --cuero2:#9A4352; --cuero:#6E2A35; --tinta:#1B2A41;
+  --serif:"Cormorant Garamond",Georgia,"Times New Roman",serif;
+  --sans:"Jost",system-ui,-apple-system,"Segoe UI",Arial,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--pergamino);color:var(--tinta);font-family:var(--sans);font-size:17px;line-height:1.6}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--cuero);outline-offset:3px}
+.wrap{width:min(1040px,100% - 2.5rem);margin-inline:auto}
+.muestra{background:var(--tinta);color:var(--pergamino2);text-align:center;font-size:.9rem;padding:.5rem 1rem}
+header{padding:1.2rem 0}
+header .wrap{display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap}
+.logo{font-family:var(--serif);font-size:1.5rem;font-weight:600;text-decoration:none;color:var(--cuero)}
+nav{display:flex;gap:1.4rem;font-size:.98rem}
+nav a{text-decoration:none;padding:.25rem 0;border-bottom:1px solid transparent}
+nav a:hover{border-color:var(--cuero)}
+.hero{padding:2.5rem 0 4rem}
+.hero .wrap{display:grid;grid-template-columns:1.25fr .75fr;gap:2.5rem;align-items:center}
+h1{font-family:var(--serif);font-weight:600;font-size:clamp(2.8rem,7vw,5rem);line-height:1.02;color:var(--tinta)}
+.hero p{margin:1.3rem 0 2rem;max-width:34ch;font-size:1.12rem;color:var(--cuero)}
+.botones{display:flex;gap:.8rem;flex-wrap:wrap}
+.btn{display:inline-block;padding:.85rem 1.6rem;border-radius:999px;text-decoration:none;font-weight:500;border:1.5px solid var(--cuero);transition:background .2s,color .2s}
+.btn.principal{background:var(--cuero);color:var(--pergamino)}
+.btn.principal:hover{background:var(--tinta);border-color:var(--tinta)}
+.btn.suave:hover{background:var(--pergamino2)}
+.arco{aspect-ratio:3/4;border-radius:999px 999px 1.2rem 1.2rem;background:linear-gradient(170deg,var(--tinta) 0%,var(--cuero) 100%);display:flex;align-items:flex-end;justify-content:center;padding:2rem;max-width:340px;justify-self:center;width:100%}
+.arco span{font-family:var(--serif);font-style:italic;font-size:1.7rem;color:var(--pergamino);text-align:center;line-height:1.2}
+section{padding:4rem 0}
+.servicios{background:var(--pergamino2)}
+h2{font-family:var(--serif);font-weight:600;font-size:clamp(2rem,4.5vw,3rem);line-height:1.1;margin-bottom:.4rem}
+.sub{color:var(--cuero);margin-bottom:2.2rem}
+.grupos{display:grid;grid-template-columns:1fr 1fr;gap:3rem}
+h3{font-family:var(--serif);font-weight:600;font-size:1.8rem;color:var(--cuero);margin-bottom:1rem;padding-bottom:.5rem;border-bottom:1.5px solid var(--cuero2)}
+.item{padding:.9rem 0;border-bottom:1px solid var(--borde)}
+.item .fila{display:flex;align-items:baseline;gap:.6rem}
+.item .nombre{font-weight:500}
+.item .linea{flex:1;border-bottom:1.5px dotted var(--cuero2);transform:translateY(-4px);min-width:1rem}
+.item .precio{font-family:var(--serif);font-size:1.35rem;font-weight:600;color:var(--cuero);white-space:nowrap}
+.item .desc{font-size:.95rem;color:var(--cuero);margin-top:.15rem}
+.item a{font-size:.92rem;color:var(--tinta)}
+.nota{margin-top:2rem;font-size:.92rem;color:var(--cuero)}
+.lugar .wrap{display:grid;grid-template-columns:.85fr 1.15fr;gap:2.5rem;align-items:start}
+.datos dt{font-family:var(--serif);font-size:1.3rem;font-weight:600;color:var(--cuero);margin-top:1.2rem}
+.datos dd{margin-top:.1rem}
+.datos .btn{margin-top:1.6rem}
+.mapa{border-radius:1.2rem;overflow:hidden;border:1.5px solid var(--borde);background:var(--pergamino2);aspect-ratio:4/3}
+.mapa iframe{width:100%;height:100%;border:0;display:block}
+.contacto{background:var(--tinta);color:var(--pergamino2);text-align:center}
+.contacto h2{color:var(--pergamino)}
+.contacto p{max-width:42ch;margin:.6rem auto 2rem}
+.contacto .btn.principal{background:var(--pergamino);border-color:var(--pergamino);color:var(--tinta)}
+.contacto .btn.principal:hover{background:var(--pergamino2);border-color:var(--pergamino2)}
+.redes{display:flex;justify-content:center;gap:1.6rem;margin-top:1.8rem;flex-wrap:wrap}
+.redes a{color:var(--pergamino2)}
+footer{background:var(--tinta);color:var(--borde);text-align:center;font-size:.88rem;padding:0 1rem 2rem}
+@media (max-width:760px){
+  .hero .wrap,.grupos,.lugar .wrap{grid-template-columns:1fr}
+  .arco{max-width:240px;aspect-ratio:4/5}
+  section{padding:3rem 0}
+  nav{gap:1rem}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn{transition:none}}
+</style>
+</head>
+<body>
+
+<div class="muestra" id="banner" hidden>Página de muestra creada por Hatts Diseños. Los datos son de ejemplo.</div>
+
+<header>
+  <div class="wrap">
+    <a class="logo" href="#inicio" id="logo">Alma Nude Studio</a>
+    <nav aria-label="Menú principal">
+      <a href="#servicios">Servicios</a>
+      <a href="#ubicacion">Ubicación</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </div>
+</header>
+
+<main id="inicio">
+  <div class="hero">
+    <div class="wrap">
+      <div>
+        <h1 id="titulo">Alma Nude Studio</h1>
+        <p id="lema">Uñas y maquillaje con acabado profesional, para que te sientas vos misma.</p>
+        <div class="botones">
+          <a class="btn principal" id="btnReservar" href="#">Reservar por WhatsApp</a>
+          <a class="btn suave" href="#servicios">Ver servicios</a>
+        </div>
+      </div>
+      <div class="arco" aria-hidden="true"><span>Uñas y<br>maquillaje</span></div>
+    </div>
+  </div>
+
+  <section class="servicios" id="servicios">
+    <div class="wrap">
+      <h2>Servicios y precios</h2>
+      <p class="sub">Precios en guaraníes. Tocá “Reservar” en el servicio que querés.</p>
+      <div class="grupos" id="grupos"></div>
+      <p class="nota" id="notaPrecios"></p>
+    </div>
+  </section>
+
+  <section class="lugar" id="ubicacion">
+    <div class="wrap">
+      <div class="datos">
+        <h2>Dónde estamos</h2>
+        <dl>
+          <dt>Dirección</dt><dd id="direccion"></dd>
+          <dt>Horario</dt><dd id="horario"></dd>
+        </dl>
+        <a class="btn principal" id="btnMapa" href="#" target="_blank" rel="noopener">Abrir en Google Maps</a>
+      </div>
+      <div class="mapa"><iframe id="mapa" title="Mapa de ubicación del estudio" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+    </div>
+  </section>
+
+  <section class="contacto" id="contacto">
+    <div class="wrap">
+      <h2>Reservá tu turno</h2>
+      <p>Escribinos por WhatsApp y te confirmamos el día y la hora.</p>
+      <a class="btn principal" id="btnContacto" href="#">Escribir por WhatsApp</a>
+      <div class="redes" id="redes"></div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <p id="pie"></p>
+</footer>
+
+<script>
+/* ============ EDITA SOLO ESTE BLOQUE ============ */
+const CONFIG = {
+  muestra: true,                       // true = muestra con aviso arriba. Al entregar: false
+  negocio: "Alma Nude Studio",
+  lema: "Uñas y maquillaje con acabado profesional, para que te sientas vos misma.",
+  whatsapp: "595981000000",            // EJEMPLO. Formato 595...
+  mensaje: "Hola, quiero reservar un turno en Alma Nude Studio.",
+  direccion: "Av. Ejemplo 1234, Asunción, Paraguay (dirección de ejemplo)",
+  mapaBusqueda: "Asunción, Paraguay",  // lo que busca el mapa
+  horario: "Lunes a sábado, de 9:00 a 19:00 (horario de ejemplo)",
+  notaPrecios: "Precios de ejemplo. Pueden cambiar según el diseño y el largo de la uña.",
+  redes: [
+    { nombre: "Instagram", link: "https://www.instagram.com/" },
+    { nombre: "Facebook",  link: "https://www.facebook.com/" }
+  ],
+  /* Los servicios se ordenan solos de mayor a menor precio */
+  grupos: [
+    { titulo: "Uñas", servicios: [
+      { nombre: "Efecto capping", desc: "Base de gel que refuerza tu uña natural.", precio: 150000 },
+      { nombre: "Esmaltado permanente", desc: "Color intenso con brillo que dura semanas.", precio: 100000 },
+      { nombre: "Esmaltado semipermanente", desc: "Color con secado en lámpara.", precio: 80000 },
+      { nombre: "Manicura tradicional", desc: "Limpieza, limado y esmalte común.", precio: 50000 }
+    ]},
+    { titulo: "Maquillaje", servicios: [
+      { nombre: "Maquillaje blindado", desc: "Fijación extra, resiste calor, baile y fotos.", precio: 280000 },
+      { nombre: "Maquillaje glam de noche", desc: "Ojos marcados y piel con mucho brillo.", precio: 220000 },
+      { nombre: "Maquillaje natural", desc: "Piel luminosa y suave para el día a día.", precio: 160000 }
+    ]}
+  ]
+};
+/* ============ FIN DEL BLOQUE ============ */
+
+(function(){
+  var C = CONFIG;
+  function $(id){ return document.getElementById(id); }
+  function wa(texto){ return "https://wa.me/" + C.whatsapp + "?text=" + encodeURIComponent(texto); }
+  function el(tag, clase, texto){
+    var e = document.createElement(tag);
+    if (clase) e.className = clase;
+    if (texto !== undefined) e.textContent = texto;
+    return e;
+  }
+
+  document.title = C.negocio + " | Uñas y maquillaje";
+  $("logo").textContent = C.negocio;
+  $("titulo").textContent = C.negocio;
+  $("lema").textContent = C.lema;
+  $("direccion").textContent = C.direccion;
+  $("horario").textContent = C.horario;
+  $("notaPrecios").textContent = C.notaPrecios;
+  $("pie").textContent = "© " + C.negocio + (C.muestra ? ". Página de muestra, datos de ejemplo." : "");
+  if (C.muestra) { $("banner").hidden = false; }
+
+  $("btnReservar").href = wa(C.mensaje);
+  $("btnContacto").href = wa(C.mensaje);
+  $("btnMapa").href = "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent(C.mapaBusqueda);
+  $("mapa").src = "https://maps.google.com/maps?q=" + encodeURIComponent(C.mapaBusqueda) + "&z=15&output=embed";
+
+  var contGrupos = $("grupos");
+  C.grupos.forEach(function(g){
+    var col = el("div");
+    col.appendChild(el("h3", "", g.titulo));
+    g.servicios.slice().sort(function(a,b){ return b.precio - a.precio; }).forEach(function(s){
+      var item = el("div", "item");
+      var fila = el("div", "fila");
+      fila.appendChild(el("span", "nombre", s.nombre));
+      fila.appendChild(el("span", "linea"));
+      fila.appendChild(el("span", "precio", s.precio.toLocaleString("es-PY") + " Gs"));
+      item.appendChild(fila);
+      item.appendChild(el("p", "desc", s.desc));
+      var a = el("a", "", "Reservar");
+      a.href = wa("Hola, quiero reservar: " + s.nombre + ".");
+      item.appendChild(a);
+      col.appendChild(item);
+    });
+    contGrupos.appendChild(col);
+  });
+
+  var contRedes = $("redes");
+  C.redes.forEach(function(r){
+    if (!r.link) return;
+    var a = el("a", "", r.nombre);
+    a.href = r.link; a.target = "_blank"; a.rel = "noopener";
+    contRedes.appendChild(a);
+  });
+})();
+</script>
+</body>
+</html>
